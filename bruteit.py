@@ -135,7 +135,7 @@ if __name__ == "__main__":
         bruteforceLogin(args.uid, args.start, args.batchSize, args.threads)
 
         end_time = time.perf_counter()
-        elapsed_time = str(end_time - start_time)[:5]
+        elapsed_time = str(end_time - start_time)
         print(f"Time taken: {elapsed_time} seconds")
 
     else:
