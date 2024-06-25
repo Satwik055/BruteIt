@@ -8,7 +8,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 
-cred = credentials.Certificate("C:\\Users\\satwi\\OneDrive\\Documents\\Saksham Bruteforcer\\bruteit-certificate.json")
+cred = credentials.Certificate("C:\\Users\\satwi\\OneDrive\\Documents\\BruteIt\\bruteit-certificate.json")
 firebase_admin.initialize_app(cred)
 
 def addPasswordToFirestore(userid, password):
